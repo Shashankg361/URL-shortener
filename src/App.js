@@ -11,7 +11,7 @@ function App() {
   const handelSubmit =async(event)=>{
     event.preventDefault();
     console.log('entered')
-    const response = await axios(`http://localhost:8000/?q=${Url}`)
+    const response = await axios(`https://url-shortener-backend-tau.vercel.app/?q=${Url}`)
     const data = response.data;
     console.log('got data from backend - ', data)
     setShortUri(data.Message) ; 
